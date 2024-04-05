@@ -25,7 +25,7 @@ export class FunnelService {
         this.messageSubscribers.splice(index, 1);
     }
 
-    unsubscribe_where(predicate: (subscriber: MessageSubscriber) => boolean)
+    unsubscribeWhere(predicate: (subscriber: MessageSubscriber) => boolean)
     {
         const toUnsubscribe : MessageSubscriber[] = [];
         for (const subscriber of this.messageSubscribers) 

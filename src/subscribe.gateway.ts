@@ -19,7 +19,7 @@ export class SubscribeGateway implements OnGatewayConnection, OnGatewayDisconnec
 
     handleDisconnect(socket: Socket)
     {
-        this.funnelService.unsubscribe_where((subscriber) => {
+        this.funnelService.unsubscribeWhere((subscriber) => {
             if (subscriber instanceof Client)
             {
                 return subscriber.socket == socket;
