@@ -3,7 +3,7 @@ import { FunnelService } from './funnel.service';
 import { Socket } from 'ws';
 import { Client } from './types/client';
 
-@WebSocketGateway(80)
+@WebSocketGateway()
 export class SubscribeGateway implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit
 {
     constructor(private readonly funnelService: FunnelService) {}
